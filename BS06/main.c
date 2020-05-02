@@ -207,7 +207,7 @@ int main() {
     scanf("%d",&anzahlThreads);
 
 
-if (parse[1] != NULL) {
+    
     pthread_t threadArr[anzahlThreads];
     for (int i = 0; i < anzahlThreads; i++) {
         printf("Create thread %d", i);
@@ -218,8 +218,8 @@ if (parse[1] != NULL) {
     for (int i = 0; i < anzahlThreads; i++) {
         pthread_join(threadArr[i], NULL);
     }
-}else{
-    printf("Syntax error: filename[STRING] ThreadCount[INT]");
+
+
 }
 
 
