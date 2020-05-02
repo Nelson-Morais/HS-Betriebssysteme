@@ -226,7 +226,7 @@ int main() {
 
     gettimeofday(&tvend, NULL);
 
-    printf("%lu\n", (tvend.tv_sec - tvbegin.tv_sec)*1000 +tvend.tv_usec-tvbegin.tv_usec);
+    printf("%lu\n", (tvend.tv_sec - tvbegin.tv_sec)*1000 +(tvend.tv_usec-tvbegin.tv_usec)/1000);
 
 
 
