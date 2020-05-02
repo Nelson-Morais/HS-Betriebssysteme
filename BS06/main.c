@@ -207,7 +207,7 @@ int main() {
     scanf("%d",&anzahlThreads);
 
 
-    
+
     pthread_t threadArr[anzahlThreads];
     for (int i = 0; i < anzahlThreads; i++) {
         printf("Create thread %d", i);
@@ -220,7 +220,7 @@ int main() {
     }
 
 
-}
+
 
 
 //    pthread_t th2, th3;
