@@ -128,6 +128,7 @@ void *readFd(void *q) {
         pthread_mutex_lock(&lock);
         queueAdd(q2, url);
         pthread_mutex_unlock(&lock);
+        pthread_mutex_destroy(&lock);
     }
     return NULL;
 }
@@ -145,6 +146,8 @@ void *writeFd(void *q) {
     while (!(tmp->empty)) {
         char *url = strdup(queueRead(q));
         char *downloadUrl = strdup(url);
+        pthread_mutex_unlock(&lock);
+        pthread_mutex_destroy(&lock);
         strtok(url, "/");
         char *domain = strtok(NULL, "/");
 
@@ -154,7 +157,7 @@ void *writeFd(void *q) {
 
         webreq_download(downloadUrl, filename);
     }
-    pthread_mutex_unlock(&lock);
+
 
 
 }
