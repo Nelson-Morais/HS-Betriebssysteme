@@ -203,11 +203,13 @@ int main() {
     pthread_create(&th, NULL, readFd, q);
     pthread_join(th, NULL);
 
+    writeFd(q);
+
     struct timeval tv1;
     gettimeofday(&tv1, NULL);
     double end = (tv1.tv_sec) * 1000 + (tv1.tv_usec) / 1000;
-    
-    printf("%d",start-end);
+
+    printf("%d\n",start-end);
 
 
 
