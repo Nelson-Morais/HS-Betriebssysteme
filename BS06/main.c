@@ -141,7 +141,7 @@ void *writeFd(void *q) {
     webreq_init(2, argv);
     int i = 0;
 
-
+    printf("Thread ist hier %i",i+1);
     pthread_mutex_lock(&lock);
     while (!(tmp->empty)) {
         char *url = strdup(queueRead(q));
@@ -151,13 +151,14 @@ void *writeFd(void *q) {
 
         char filename[64];
         snprintf(filename, sizeof(filename), "%i_%s.html", i++, domain);
-        printf("Downloading URL: %s\n", downloadUrl, filename);
-
+        printf("Downloading URL: %s", downloadUrl, filename);
+        printf(" Thread ist raus %i",i+1);
         webreq_download(downloadUrl,filename);
 
 
     }
     pthread_mutex_unlock(&lock);
+    printf("Thread ist raus %i",i+1);
 
 
 }
