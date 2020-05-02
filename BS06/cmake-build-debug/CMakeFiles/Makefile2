@@ -44,10 +44,10 @@ RM = /opt/clion-2019.3.5/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ohgee/Desktop/BS06
+CMAKE_SOURCE_DIR = /home/ohgee/Documents/Betriebssysteme/BS06
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ohgee/Desktop/BS06/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ohgee/Documents/Betriebssysteme/BS06/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ preinstall:
 CMakeFiles/BS06.dir/all:
 	$(MAKE) -f CMakeFiles/BS06.dir/build.make CMakeFiles/BS06.dir/depend
 	$(MAKE) -f CMakeFiles/BS06.dir/build.make CMakeFiles/BS06.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ohgee/Desktop/BS06/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target BS06"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ohgee/Documents/Betriebssysteme/BS06/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target BS06"
 .PHONY : CMakeFiles/BS06.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BS06.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohgee/Desktop/BS06/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohgee/Documents/Betriebssysteme/BS06/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BS06.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohgee/Desktop/BS06/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohgee/Documents/Betriebssysteme/BS06/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/BS06.dir/rule
 
 # Convenience name for target.
