@@ -216,7 +216,7 @@ int main() {
         pthread_create(&threadArr[i], NULL, writeFd, q);
     }
 
-    printf("vor multijoin\n");
+
     for (int i = 0; i < anzahlThreads; i++) {
         pthread_join(threadArr[i], NULL);
     }
@@ -226,7 +226,7 @@ int main() {
 
     gettimeofday(&tvend, NULL);
 
-    printf("%lf\n", (tvend.tv_sec - tvbegin.tv_sec)+(tvend.tv_usec-tvbegin.tv_usec));
+    printf("%lu\n", (tvend.tv_sec - tvbegin.tv_sec)*1000000 +tvend.tv_usec-tvbegin.tv_usec);
 
 
 
