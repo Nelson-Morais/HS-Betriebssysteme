@@ -205,11 +205,14 @@ int main() {
     int n = 2;
     pthread_t threadArr[n];
     for (int i = 0; i < sizeof(threadArr); i++){
+        printf("Create thread %d",i);
         pthread_create(&threadArr[i],NULL,writeFd,q);
-
     }
+
     printf("vor multijoin");
-    multiJoin(threadArr);
+    for (int i = 0; i < sizeof(threadArr); i++){
+        pthread_join(threadArr[i],NULL);
+    }
 
 //    pthread_t th2, th3;
 
