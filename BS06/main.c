@@ -203,7 +203,7 @@ int main() {
 
 
     printf("Anzahl threads:");
-    scanf("%d\n",&anzahlThreads);
+    scanf("%d",&anzahlThreads);
 
 
 //    struct timeval tv;
