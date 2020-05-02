@@ -181,9 +181,7 @@ int main() {
     int anzahlThreads;
 
 
-    struct timeval tv;
-    gettimeofday(&tv, NULL);
-    double start = (tv.tv_sec) * 1000 + (tv.tv_usec) / 1000;
+
 
     queue *q = NULL;
 
@@ -203,35 +201,40 @@ int main() {
     pthread_create(&th, NULL, readFd, q);
     pthread_join(th, NULL);
 
-    writeFd(q);
+
+    printf("Anzahl threads:");
+    scanf("%d\n",&anzahlThreads);
+
+
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    double start = (tv.tv_sec) * 1000 + (tv.tv_usec) / 1000;
+
+    pthread_t threadArr[anzahlThreads];
+    for (int i = 0; i < anzahlThreads; i++) {
+        printf("Create thread %d\n", i);
+        pthread_create(&threadArr[i], NULL, writeFd, q);
+    }
+
+    printf("vor multijoin\n");
+    for (int i = 0; i < anzahlThreads; i++) {
+        pthread_join(threadArr[i], NULL);
+    }
+
 
     struct timeval tv1;
     gettimeofday(&tv1, NULL);
     double end = (tv1.tv_sec) * 1000 + (tv1.tv_usec) / 1000;
 
-    printf("%d\n",start-end);
+    printf("%i\n",end-start);
 
 
 
     // code ohne threads //
     //readFd(q);
+    //writeFd(q);
 
-//    printf("Anzahl threads:");
-//    scanf("%d\n",&anzahlThreads);
-//
-//
-//
-//    pthread_t threadArr[anzahlThreads];
-//    for (int i = 0; i < anzahlThreads; i++) {
-//        printf("Create thread %d\n", i);
-//        pthread_create(&threadArr[i], NULL, writeFd, q);
-//    }
-//
-//    printf("vor multijoin\n");
-//    for (int i = 0; i < anzahlThreads; i++) {
-//        pthread_join(threadArr[i], NULL);
-//    }
-//
+
 
 
 
