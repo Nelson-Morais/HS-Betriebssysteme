@@ -150,7 +150,7 @@ void *writeFd(void *q) {
         char filename[64];
         snprintf(filename, sizeof(filename), "%i_%s.html", i++, domain);
 //        printf("Downloading URL: %s\n", downloadUrl);
-   
+
         webreq_download(downloadUrl,filename);
     }
     pthread_mutex_unlock(&lock);
@@ -199,7 +199,7 @@ int main() {
     // code ohne threads //
     //readFd(q);
 
-    int n = 2;
+    int n = 1;
     pthread_t threadArr[n];
     multiThread(writeFd(q),threadArr,n);
     multiJoin(threadArr,n);
