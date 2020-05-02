@@ -6,7 +6,7 @@
 #include "include/web_request.c"
 
 #define maxChar 256
-#define QUEUESIZE 20
+#define QUEUESIZE 30
 
 int threadsize = 10;
 char input[maxChar];
@@ -54,7 +54,7 @@ void queueDelete(queue *q) {
 }
 
 void queueDel(queue *q, char *out) {
-    *out = q->buf[q->head];
+    *out = (char) q->buf[q->head];
 
     q->head++;
     if (q->head == QUEUESIZE)
@@ -63,7 +63,7 @@ void queueDel(queue *q, char *out) {
         q->empty = 1;
     q->full = 0;
 
-    return;
+
 }
 
 char *queueRead(queue *q) {
@@ -88,7 +88,7 @@ void queueAdd(queue *q, char *in) {
         q->full = 1;
     q->empty = 0;
 
-    return;
+
 }
 
 char strParse(char *input, char **parse) {
@@ -141,7 +141,7 @@ void *writeFd(void *q) {
     webreq_init(2, argv);
     int i = 0;
 
-    printf("Thread ist hier %i",i+1);
+    printf("Thread ist hier %i",i);
     pthread_mutex_lock(&lock);
     while (!(tmp->empty)) {
         char *url = strdup(queueRead(q));
@@ -151,30 +151,34 @@ void *writeFd(void *q) {
 
         char filename[64];
         snprintf(filename, sizeof(filename), "%i_%s.html", i++, domain);
-        printf("Downloading URL: %s", downloadUrl, filename);
-        printf(" Thread ist raus %i",i+1);
+        printf("Downloading URL: %s", downloadUrl);
+        printf(" Thread %i",i);
         webreq_download(downloadUrl,filename);
 
 
     }
     pthread_mutex_unlock(&lock);
-    printf("Thread ist raus %i",i+1);
+    printf("Thread ist raus %i",i);
 
 
 }
 
 
-void multiThread(void (*f)(void*), int n){
+void multiThread(void (*f)(void*),pthread_t* threadArr, int n){
 
-    pthread_t threadArr[n];
+
 
     for(int i = 0; i < sizeof(threadArr);i++){
-        pthread_create(&threadArr[i],NULL,f,NULL);
-    }
-    for(int i = 0; i < sizeof(threadArr); i++){
-        pthread_join(&threadArr[i],NULL);
+        pthread_create(&threadArr[i], NULL, (void *(*)(void *)) f, NULL);
     }
 
+
+}
+
+void multiJoin(pthread_t *threadArr, int n){
+    for(int i = 0; i < sizeof(threadArr); i++){
+        pthread_join((pthread_t) &threadArr[i], NULL);
+    }
 }
 
 int main() {
@@ -187,7 +191,7 @@ int main() {
     printf("Filename:");
     fgets(input, MAX_INPUT, stdin);
     input[strcspn(input, "\n")] = '\0';
-    if (input[0] == NULL || *input == ' ') {
+    if ((void *) input[0] == NULL || *input == ' ') {
 
 
     } else {
@@ -203,9 +207,12 @@ int main() {
     // code ohne threads //
     //readFd(q);
 
+    int n = 2;
+    pthread_t threadArr[n];
+    multiThread(writeFd(q),threadArr,n);
+    multiJoin(threadArr,n);
 
 
-    multiThread(writeFd(q),2);
 
 //    queuePrint(q);
     return 0;
