@@ -207,8 +207,7 @@ int main() {
 
 
     struct timeval tv;
-    gettimeofday(&tv, NULL);
-    double start = (tv.tv_sec) * 1000 + (tv.tv_usec) / 1000;
+    double start = (tv.tv_usec) / 1000;
 
     pthread_t threadArr[anzahlThreads];
     for (int i = 0; i < anzahlThreads; i++) {
@@ -222,9 +221,9 @@ int main() {
     }
 
 
-    struct timeval tv1;
-    gettimeofday(&tv1, NULL);
-    double end = (tv1.tv_sec) * 1000 + (tv1.tv_usec) / 1000;
+
+
+    double end =(tv.tv_usec) / 1000;
 
     printf("%i\n",end-start);
 
