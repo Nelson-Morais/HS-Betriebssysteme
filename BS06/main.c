@@ -204,13 +204,13 @@ int main() {
 
     int n = 2;
     pthread_t threadArr[n];
-    for (int i = 0; i < sizeof(threadArr); i++){
+    for (int i = 0; i < n; i++){
         printf("Create thread %d",i);
         pthread_create(&threadArr[i],NULL,writeFd,q);
     }
 
     printf("vor multijoin");
-    for (int i = 0; i < sizeof(threadArr); i++){
+    for (int i = 0; i < n; i++){
         pthread_join(threadArr[i],NULL);
     }
 
