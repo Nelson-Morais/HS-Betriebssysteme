@@ -176,7 +176,7 @@ void multiJoin(pthread_t *threadArr) {
 
 int main() {
     char **args;
-    int anzahlThreads;
+    int anzahlThreads = (int) parse[1];
 
 
     queue *q = NULL;
@@ -203,19 +203,21 @@ int main() {
     // code ohne threads //
     //readFd(q);
 
-    printf("AnzahlThreads:");
-    fgets(anzahlThreads, 10, stdin);
 
+if (parse[1] != NULL) {
     pthread_t threadArr[anzahlThreads];
-    for (int i = 0; i < anzahlThreads; i++){
-        printf("Create thread %d",i);
-        pthread_create(&threadArr[i],NULL,writeFd,q);
+    for (int i = 0; i < anzahlThreads; i++) {
+        printf("Create thread %d", i);
+        pthread_create(&threadArr[i], NULL, writeFd, q);
     }
 
     printf("vor multijoin");
-    for (int i = 0; i < anzahlThreads; i++){
-        pthread_join(threadArr[i],NULL);
+    for (int i = 0; i < anzahlThreads; i++) {
+        pthread_join(threadArr[i], NULL);
     }
+}else{
+    printf("Syntax error: filename[STRING] ThreadCount[INT]");
+}
 
 
 //    pthread_t th2, th3;
