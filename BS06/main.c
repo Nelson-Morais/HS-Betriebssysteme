@@ -13,31 +13,31 @@ char input[maxChar];
 char *parse[maxChar];
 
 typedef struct {
-    char* buf[QUEUESIZE];
+    char *buf[QUEUESIZE];
     long head, tail;
     int full, empty;
 
 } queue;
 
-int queueSize(queue *q){
-    int rtr = (q->tail)-(q->head);
+int queueSize(queue *q) {
+    int rtr = (q->tail) - (q->head);
     return rtr;
 }
 
-char* queuePrint(queue *q){
+char *queuePrint(queue *q) {
     int i = q->head;
     int j = q->tail;
     char *tmp;
-    while(i!=j){
+    while (i != j) {
         tmp = q->buf[i++];
-        printf("%s\n",tmp);
+        printf("%s\n", tmp);
     }
 }
 
-queue *queueInit (void){
+queue *queueInit(void) {
     queue *q;
 
-    q = (queue *)malloc (sizeof (queue));
+    q = (queue *) malloc(sizeof(queue));
     if (q == NULL) return (NULL);
 
     q->empty = 1;
@@ -48,12 +48,11 @@ queue *queueInit (void){
     return (q);
 }
 
-void queueDelete (queue *q){
-    free (q);
+void queueDelete(queue *q) {
+    free(q);
 }
 
-void queueDel (queue *q, char *out)
-{
+void queueDel(queue *q, char *out) {
     *out = q->buf[q->head];
 
     q->head++;
@@ -66,8 +65,7 @@ void queueDel (queue *q, char *out)
     return;
 }
 
-char* queueRead (queue *q)
-{
+char *queueRead(queue *q) {
     char *out = q->buf[q->head];
 
     q->head++;
@@ -80,7 +78,7 @@ char* queueRead (queue *q)
     return out;
 }
 
-void queueAdd (queue *q, char *in){
+void queueAdd(queue *q, char *in) {
     q->buf[q->tail] = strdup(in);
     q->tail++;
     if (q->tail == QUEUESIZE)
@@ -105,13 +103,13 @@ char strParse(char *input, char **parse) {
     }
 }
 
-void *readFd(void *q){
+void *readFd(void *q) {
     pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
-    queue *q2 = (queue*) q;
+    queue *q2 = (queue *) q;
 
-    FILE* fd_in;
+    FILE *fd_in;
     fd_in = fopen(parse[0], "r");
-    if (fd_in == NULL){
+    if (fd_in == NULL) {
         perror("failed to open input file");
         exit(EXIT_FAILURE);
     }
@@ -119,35 +117,47 @@ void *readFd(void *q){
     char url[maxChar];
     char *pos;
 
-    while(fgets(url, sizeof(url),fd_in) != NULL){
-        if ((pos=strchr(url, '\n')) != NULL)
+    while (fgets(url, sizeof(url), fd_in) != NULL) {
+        if ((pos = strchr(url, '\n')) != NULL) {
             *pos = '\0';
+        }
+
         pthread_mutex_lock(&lock);
-        queueAdd(q2,url);
+        queueAdd(q2, url);
         pthread_mutex_unlock(&lock);
 
     }
 
     return NULL;
-
 }
 
-void *writeFd(void *q){
-    queue *tmp = (queue*) q;
-    webreq_init(100,"Download");
+void *writeFd(void *q) {
+    queue *tmp = (queue *) q;
+    char *argv[2];
+    argv[0] = "--webreq-delay 100";
+    argv[1] = "--webreq-path download";
 
-    while(!(tmp->empty)){
-        char* url = strdup(queueRead(q));
-        strtok(url,"/");
-        char* domain = strtok(NULL,"/");
-        printf("%s",domain);
+
+    webreq_init(2, argv);
+    int i = 0;
+    while (!(tmp->empty)) {
+        char *url = strdup(queueRead(q));
+        strtok(url, "/");
+        char *domain = strtok(NULL, "/");
+
+        char filename[64];
+        snprintf(filename, sizeof(filename), "%i_%s.html", i++, domain);
+        printf("Downloading URL: %s\n", url, filename);
+
+        webreq_download(url,filename);
+
+        free(url);
     }
 
-    return NULL;
+
 }
 
-int main()
-{
+int main() {
     char **args;
     pthread_t th;
 
@@ -160,19 +170,21 @@ int main()
     if (input[0] == NULL || *input == ' ') {
 
 
-    }else {
-        strParse(input,parse);
+    } else {
+        strParse(input, parse);
     }
 
     q = queueInit();
 
-    pthread_create(&th,NULL,readFd,q);
-    pthread_join(th,NULL);
+    pthread_create(&th, NULL, readFd, q);
+    pthread_join(th, NULL);
 
-    readFd(q);
-    //writeFd(q);
 
-   queuePrint(q);
+    // code ohne threads //
+    //readFd(q);
+    writeFd(q);
+
+//    queuePrint(q);
     return 0;
 
 }
