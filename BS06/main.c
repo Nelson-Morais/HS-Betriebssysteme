@@ -122,13 +122,10 @@ void *readFd(void *q) {
         if ((pos = strchr(url, '\n')) != NULL) {
             *pos = '\0';
         }
-
         pthread_mutex_lock(&lock);
         queueAdd(q2, url);
         pthread_mutex_unlock(&lock);
-
     }
-
     return NULL;
 }
 
@@ -140,8 +137,9 @@ void *writeFd(void *q) {
 
     webreq_init(2, argv);
     int i = 0;
+    int j = 0;
 
-    printf("Thread ist hier %i",i);
+    printf("%i",++j);
     pthread_mutex_lock(&lock);
     while (!(tmp->empty)) {
         char *url = strdup(queueRead(q));
@@ -151,14 +149,11 @@ void *writeFd(void *q) {
 
         char filename[64];
         snprintf(filename, sizeof(filename), "%i_%s.html", i++, domain);
-        printf("Downloading URL: %s", downloadUrl);
-        printf(" Thread %i",i);
+//        printf("Downloading URL: %s\n", downloadUrl);
+   
         webreq_download(downloadUrl,filename);
-
-
     }
     pthread_mutex_unlock(&lock);
-    printf("Thread ist raus %i",i);
 
 
 }
@@ -166,16 +161,13 @@ void *writeFd(void *q) {
 
 void multiThread(void (*f)(void*),pthread_t* threadArr, int n){
 
-
-
     for(int i = 0; i < sizeof(threadArr);i++){
         pthread_create(&threadArr[i], NULL, (void *(*)(void *)) f, NULL);
     }
-
-
 }
 
 void multiJoin(pthread_t *threadArr, int n){
+
     for(int i = 0; i < sizeof(threadArr); i++){
         pthread_join((pthread_t) &threadArr[i], NULL);
     }
