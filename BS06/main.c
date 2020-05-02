@@ -172,7 +172,7 @@ int main()
     readFd(q);
     //writeFd(q);
 
-//    queuePrint(q);
+   queuePrint(q);
     return 0;
 
 }
