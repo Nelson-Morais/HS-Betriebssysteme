@@ -11,6 +11,7 @@
 int threadsize = 10;
 char input[maxChar];
 char *parse[maxChar];
+pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
 typedef struct {
     char *buf[QUEUESIZE];
@@ -104,7 +105,7 @@ char strParse(char *input, char **parse) {
 }
 
 void *readFd(void *q) {
-    pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+
     queue *q2 = (queue *) q;
 
     FILE *fd_in;
@@ -137,9 +138,11 @@ void *writeFd(void *q) {
     argv[0] = "--webreq-delay 100";
     argv[1] = "--webreq-path download";
 
-
     webreq_init(2, argv);
     int i = 0;
+
+
+    pthread_mutex_lock(&lock);
     while (!(tmp->empty)) {
         char *url = strdup(queueRead(q));
         char *downloadUrl = strdup(url);
@@ -152,9 +155,24 @@ void *writeFd(void *q) {
 
         webreq_download(downloadUrl,filename);
 
-       
-    }
 
+    }
+    pthread_mutex_unlock(&lock);
+
+
+}
+
+
+void multiThread(void (*f)(void*), int n){
+
+    pthread_t threadArr[n];
+
+    for(int i = 0; i < sizeof(threadArr);i++){
+        pthread_create(&threadArr[i],NULL,f,NULL);
+    }
+    for(int i = 0; i < sizeof(threadArr); i++){
+        pthread_join(&threadArr,NULL);
+    }
 
 }
 
@@ -183,7 +201,10 @@ int main() {
 
     // code ohne threads //
     //readFd(q);
-    writeFd(q);
+
+
+
+    multiThread(writeFd(q),2);
 
 //    queuePrint(q);
     return 0;
