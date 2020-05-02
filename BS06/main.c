@@ -176,7 +176,7 @@ void multiJoin(pthread_t *threadArr) {
 
 int main() {
     char **args;
-    int anzahlThreads = (int) parse[1];
+    int anzahlThreads;
 
 
     queue *q = NULL;
@@ -202,6 +202,9 @@ int main() {
 
     // code ohne threads //
     //readFd(q);
+
+    printf("Anzahl threads: ");
+    scanf("%d",&anzahlThreads);
 
 
 if (parse[1] != NULL) {
