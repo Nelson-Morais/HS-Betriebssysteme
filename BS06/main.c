@@ -149,7 +149,7 @@ void *writeFd(void *q) {
 
         char filename[64];
         snprintf(filename, sizeof(filename), "%i_%s.html", i++, domain);
-//        printf("Downloading URL: %s\n", downloadUrl);
+        printf("Downloading URL: %s\n", downloadUrl);
 
         webreq_download(downloadUrl,filename);
     }
@@ -205,9 +205,13 @@ int main() {
 
     int n = 2;
     pthread_t threadArr[n];
-    multiThread(writeFd(q),threadArr);
-    multiJoin(threadArr);
+//    multiThread(writeFd(q),threadArr);
+//    multiJoin(threadArr);
 
+    pthread_t th2;
+
+    pthread_create(&th2,NULL,writeFd,q);
+    pthread_join(th2,NULL);
 
 
 //    queuePrint(q);
