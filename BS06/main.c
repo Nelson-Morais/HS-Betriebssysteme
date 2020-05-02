@@ -172,7 +172,7 @@ void multiThread(void (*f)(void*), int n){
         pthread_create(&threadArr[i],NULL,f,NULL);
     }
     for(int i = 0; i < sizeof(threadArr); i++){
-        pthread_join(&threadArr,NULL);
+        pthread_join(&threadArr[i],NULL);
     }
 
 }
