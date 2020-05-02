@@ -159,23 +159,26 @@ void *writeFd(void *q) {
 }
 
 
-void multiThread(void (*f)(void*),pthread_t* threadArr, int n){
+void multiThread(void (*f)(void*),pthread_t* threadArr){
 
     for(int i = 0; i < sizeof(threadArr);i++){
+        printf("Multithread %d",i);
         pthread_create(&threadArr[i], NULL, (void *(*)(void *)) f, NULL);
+
     }
 }
 
-void multiJoin(pthread_t *threadArr, int n){
+void multiJoin(pthread_t *threadArr){
 
     for(int i = 0; i < sizeof(threadArr); i++){
+        printf("Multijoin %d",i);
         pthread_join((pthread_t) &threadArr[i], NULL);
     }
 }
 
 int main() {
     char **args;
-    pthread_t th;
+
 
 
     queue *q = NULL;
@@ -192,6 +195,7 @@ int main() {
 
     q = queueInit();
 
+    pthread_t th;
     pthread_create(&th, NULL, readFd, q);
     pthread_join(th, NULL);
 
@@ -199,10 +203,10 @@ int main() {
     // code ohne threads //
     //readFd(q);
 
-    int n = 1;
+    int n = 2;
     pthread_t threadArr[n];
-    multiThread(writeFd(q),threadArr,n);
-    multiJoin(threadArr,n);
+    multiThread(writeFd(q),threadArr);
+    multiJoin(threadArr);
 
 
 
