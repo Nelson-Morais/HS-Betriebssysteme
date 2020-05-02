@@ -137,9 +137,7 @@ void *writeFd(void *q) {
 
     webreq_init(2, argv);
     int i = 0;
-    int j = 0;
 
-    printf("%i\n", ++j);
     pthread_mutex_lock(&lock);
     while (!(tmp->empty)) {
         char *url = strdup(queueRead(q));
@@ -178,6 +176,7 @@ void multiJoin(pthread_t *threadArr) {
 
 int main() {
     char **args;
+    int anzahlThreads;
 
 
     queue *q = NULL;
@@ -199,20 +198,25 @@ int main() {
     pthread_join(th, NULL);
 
 
+
+
     // code ohne threads //
     //readFd(q);
 
-    int n = 2;
-    pthread_t threadArr[n];
-    for (int i = 0; i < n; i++){
+    printf("AnzahlThreads:");
+    fgets(anzahlThreads, 10, stdin);
+
+    pthread_t threadArr[anzahlThreads];
+    for (int i = 0; i < anzahlThreads; i++){
         printf("Create thread %d",i);
         pthread_create(&threadArr[i],NULL,writeFd,q);
     }
 
     printf("vor multijoin");
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < anzahlThreads; i++){
         pthread_join(threadArr[i],NULL);
     }
+
 
 //    pthread_t th2, th3;
 
