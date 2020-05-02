@@ -142,16 +142,17 @@ void *writeFd(void *q) {
     int i = 0;
     while (!(tmp->empty)) {
         char *url = strdup(queueRead(q));
+        char *downloadUrl = strdup(url);
         strtok(url, "/");
         char *domain = strtok(NULL, "/");
 
         char filename[64];
         snprintf(filename, sizeof(filename), "%i_%s.html", i++, domain);
-        printf("Downloading URL: %s\n", url, filename);
+        printf("Downloading URL: %s\n", downloadUrl, filename);
 
-        webreq_download(url,filename);
+        webreq_download(downloadUrl,filename);
 
-        free(url);
+       
     }
 
 
