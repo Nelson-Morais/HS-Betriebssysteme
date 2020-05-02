@@ -139,7 +139,7 @@ void *writeFd(void *q) {
     int i = 0;
     int j = 0;
 
-    printf("%i",++j);
+    printf("%i\n",++j);
     pthread_mutex_lock(&lock);
     while (!(tmp->empty)) {
         char *url = strdup(queueRead(q));
@@ -208,9 +208,11 @@ int main() {
 //    multiThread(writeFd(q),threadArr);
 //    multiJoin(threadArr);
 
-    pthread_t th2;
+    pthread_t th2, th3;
 
     pthread_create(&th2,NULL,writeFd,q);
+    pthread_create(&th3,NULL,writeFd,q);
+    pthread_join(th3,NULL);
     pthread_join(th2,NULL);
 
 
