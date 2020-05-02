@@ -136,7 +136,7 @@ void *readFd(void *q) {
 void *writeFd(void *q) {
     queue *tmp = (queue *) q;
     char *argv[2];
-    argv[0] = "--webreq-delay 100";
+    argv[0] = "--webreq-delay 0";
     argv[1] = "--webreq-path download";
 
     webreq_init(2, argv);
@@ -162,24 +162,6 @@ void *writeFd(void *q) {
 
 }
 
-
-//void multiThread(void (*f)(void *), pthread_t *threadArr, queue *q) {
-//
-//    for (int i = 0; i < sizeof(threadArr); i++) {
-//        printf("Multithread %d", i);
-//        pthread_create(&threadArr[i], NULL, f, q);
-//
-//    }
-//}
-
-void multiJoin(pthread_t *threadArr) {
-
-    for (int i = 0; i < sizeof(threadArr); i++) {
-        printf("Multijoin %d", i);
-        pthread_join((pthread_t) &threadArr[i], NULL);
-    }
-}
-
 int main() {
     char **args;
     int anzahlThreads;
@@ -193,7 +175,8 @@ int main() {
     fgets(input, MAX_INPUT, stdin);
     input[strcspn(input, "\n")] = '\0';
     if ((void *) input[0] == NULL || *input == ' ') {
-
+        printf("No input");
+        exit(0);
 
     } else {
         strParse(input, parse);
@@ -205,7 +188,7 @@ int main() {
     pthread_create(&th, NULL, readFd, q);
     pthread_join(th, NULL);
 
-
+//download sites
     printf("Anzahl threads:");
     scanf("%d",&anzahlThreads);
 
@@ -219,38 +202,14 @@ int main() {
         pthread_create(&threadArr[i], NULL, writeFd, q);
     }
 
-
     for (int i = 0; i < anzahlThreads; i++) {
         pthread_join(threadArr[i], NULL);
     }
 
-
-
-
     gettimeofday(&tvend, NULL);
 
-    printf("%lu\n", (tvend.tv_sec - tvbegin.tv_sec)*1000 +(tvend.tv_usec-tvbegin.tv_usec)/1000);
-
-
-
-    // code ohne threads //
-    //readFd(q);
-    //writeFd(q);
-
-
-
-
-
-
-//    pthread_t th2, th3;
-
-//    pthread_create(&th2,NULL,writeFd,q);
-//    pthread_create(&th3,NULL,writeFd,q);
-//    pthread_join(th3,NULL);
-//    pthread_join(th2,NULL);
-
-
-//    queuePrint(q);
+    printf("%lu", (tvend.tv_sec - tvbegin.tv_sec)*1000 +(tvend.tv_usec-tvbegin.tv_usec)/1000); //print duration
+    printf("ms\n");
     return 0;
 
 }
