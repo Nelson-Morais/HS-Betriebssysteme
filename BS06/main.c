@@ -4,6 +4,7 @@
 #include <values.h>
 #include <string.h>
 #include "include/web_request.c"
+#include <sys/time.h>
 
 #define maxChar 256
 #define QUEUESIZE 30
@@ -206,8 +207,8 @@ int main() {
     scanf("%d",&anzahlThreads);
 
 
-    struct timeval tv;
-    double start = (tv.tv_usec) / 1000;
+    struct timeval tvbegin, tvend;
+    gettimeofday(&tvbegin,NULL);
 
     pthread_t threadArr[anzahlThreads];
     for (int i = 0; i < anzahlThreads; i++) {
@@ -223,9 +224,9 @@ int main() {
 
 
 
-    double end =(tv.tv_usec) / 1000;
+    gettimeofday(&tvend, NULL);
 
-    printf("%i\n",end-start);
+    printf("%lf\n", (tvend.tv_sec - tvbegin.tv_sec)+(tvend.tv_usec-tvbegin.tv_usec));
 
 
 
