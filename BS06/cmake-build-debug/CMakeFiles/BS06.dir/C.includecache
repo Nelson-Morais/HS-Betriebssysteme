@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ohgee/Desktop/BS06/include/web_request.h
+
+/home/ohgee/Desktop/BS06/main.c
+pthread.h
+-
+stdio.h
+-
+stdlib.h
+-
+values.h
+-
+string.h
+-
+include/web_request.h
+/home/ohgee/Desktop/BS06/include/web_request.h
+
