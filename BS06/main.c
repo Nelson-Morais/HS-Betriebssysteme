@@ -156,7 +156,7 @@ void *writeFd(void *q) {
         char *domain = strtok(NULL, "/");
 
         int id = (int) pthread_self();
-        printf("%s",id);
+        printf("%d",id);
 
         char filename[64];
         snprintf(filename, sizeof(filename), "%i_%s.html", id, domain);
