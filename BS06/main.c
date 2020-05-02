@@ -169,8 +169,8 @@ int main()
     pthread_create(&th,NULL,readFd,q);
     pthread_join(th,NULL);
 
-
-    writeFd(q);
+    readFd(q);
+    //writeFd(q);
 
 //    queuePrint(q);
     return 0;
