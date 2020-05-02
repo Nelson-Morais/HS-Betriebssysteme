@@ -13,6 +13,7 @@ int threadsize = 10;
 char input[maxChar];
 char *parse[maxChar];
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+int test;
 
 typedef struct {
     char *buf[QUEUESIZE];
@@ -20,6 +21,7 @@ typedef struct {
     int full, empty;
 
 } queue;
+
 
 
 
@@ -146,13 +148,18 @@ void *writeFd(void *q) {
     while (!(tmp->empty)) {
         char *url = strdup(queueRead(q));
         char *downloadUrl = strdup(url);
+
+
         pthread_mutex_unlock(&lock);
         pthread_mutex_destroy(&lock);
         strtok(url, "/");
         char *domain = strtok(NULL, "/");
 
+        int id = (int) pthread_self();
+        printf("%s",id);
+
         char filename[64];
-        snprintf(filename, sizeof(filename), "%i_%s.html", i++, domain);
+        snprintf(filename, sizeof(filename), "%i_%s.html", id, domain);
         printf("Downloading URL: %s\n", downloadUrl);
 
         webreq_download(downloadUrl, filename);
@@ -165,11 +172,8 @@ void *writeFd(void *q) {
 int main() {
     char **args;
     int anzahlThreads;
-
-
-
-
     queue *q = NULL;
+
 
     printf("Filename:");
     fgets(input, MAX_INPUT, stdin);
@@ -177,7 +181,6 @@ int main() {
     if ((void *) input[0] == NULL || *input == ' ') {
         printf("No input");
         exit(0);
-
     } else {
         strParse(input, parse);
     }
@@ -187,6 +190,7 @@ int main() {
     pthread_t th;
     pthread_create(&th, NULL, readFd, q);
     pthread_join(th, NULL);
+
 
 //download sites
     printf("Anzahl threads:");
@@ -210,6 +214,7 @@ int main() {
 
     printf("%lu", (tvend.tv_sec - tvbegin.tv_sec)*1000 +(tvend.tv_usec-tvbegin.tv_usec)/1000); //print duration
     printf("ms\n");
+
     return 0;
 
 }
