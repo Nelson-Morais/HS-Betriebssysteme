@@ -191,8 +191,7 @@ int main() {
     pthread_create(&th, NULL, readFd, q);
     pthread_join(th, NULL);
 
-
-//download sites
+    
     printf("Anzahl threads:");
     scanf("%d",&anzahlThreads);
 
