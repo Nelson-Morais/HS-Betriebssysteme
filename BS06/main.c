@@ -191,7 +191,7 @@ int main() {
     pthread_create(&th, NULL, readFd, q);
     pthread_join(th, NULL);
 
-    
+//comment
     printf("Anzahl threads:");
     scanf("%d",&anzahlThreads);
 
