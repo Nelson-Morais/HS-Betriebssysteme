@@ -34,7 +34,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Prog2/tiefe_Kopie_Lsg.cpp" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -67,6 +67,7 @@
       <workItem from="1588431393757" duration="24119000" />
       <workItem from="1588521397628" duration="380000" />
       <workItem from="1588549451373" duration="2510000" />
+      <workItem from="1588603827754" duration="4649000" />
     </task>
     <servers />
   </component>
@@ -82,10 +83,10 @@
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
     <state width="421" height="506" key="DebuggerActiveHint/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588431246835" />
-    <state x="718" y="466" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588431683661">
+    <state x="718" y="466" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588603845012">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state x="718" y="466" width="424" height="484" key="FileChooserDialogImpl/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588431683661" />
+    <state x="718" y="466" width="424" height="484" key="FileChooserDialogImpl/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588603845012" />
     <state width="1261" height="295" key="GridCell.Tab.0.bottom" timestamp="1588459667739">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
@@ -106,10 +107,10 @@
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
     <state x="457" y="553" key="SettingsEditor/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588427928808" />
-    <state x="739" y="563" key="com.intellij.ide.util.TipDialog" timestamp="1588549453081">
+    <state x="739" y="563" key="com.intellij.ide.util.TipDialog" timestamp="1588603827739">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state x="739" y="563" key="com.intellij.ide.util.TipDialog/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588549453081" />
+    <state x="739" y="563" key="com.intellij.ide.util.TipDialog/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588603827739" />
     <state x="442" y="364" key="run.anything.popup" timestamp="1588446738685">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>

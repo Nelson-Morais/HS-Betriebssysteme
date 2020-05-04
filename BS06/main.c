@@ -1,3 +1,9 @@
+/*Code by:
+ * NELSON MORAIS
+ * HS Osnabrück
+ * Betreibssysteme Praktikum 06
+ */
+
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>

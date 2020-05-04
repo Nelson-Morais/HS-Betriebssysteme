@@ -79,6 +79,7 @@ BS06_EXTERNAL_OBJECTS =
 
 BS06: CMakeFiles/BS06.dir/main.c.o
 BS06: CMakeFiles/BS06.dir/build.make
+BS06: /usr/lib/x86_64-linux-gnu/libcurl.so
 BS06: CMakeFiles/BS06.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ohgee/Documents/Betriebssysteme/BS06/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable BS06"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BS06.dir/link.txt --verbose=$(VERBOSE)

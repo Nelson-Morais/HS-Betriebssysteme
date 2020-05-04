@@ -23,12 +23,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU-C.cmake"
   "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU.cmake"
+  "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/FindCURL.cmake"
+  "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake"
+  "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/FindPackageMessage.cmake"
+  "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/FindPkgConfig.cmake"
   "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU-C.cmake"
   "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU.cmake"
   "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux.cmake"
   "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/Platform/UnixPaths.cmake"
   "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/ProcessorCount.cmake"
+  "/opt/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:
