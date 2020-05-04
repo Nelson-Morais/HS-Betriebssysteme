@@ -156,11 +156,12 @@ void *writeFd(void *q) {
         char *domain = strtok(NULL, "/");
 
         int id = (int) pthread_self();
-        printf("%d",id);
+
 
         char filename[64];
         snprintf(filename, sizeof(filename), "%i_%s.html", id, domain);
-        printf("Downloading URL: %s\n", downloadUrl);
+        printf("Thread id: %d",id);
+        printf(" Downloading URL: %s\n", downloadUrl);
 
         webreq_download(downloadUrl, filename);
     }
