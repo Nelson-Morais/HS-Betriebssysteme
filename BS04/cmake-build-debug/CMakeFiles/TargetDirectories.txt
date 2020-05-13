@@ -1,0 +1,3 @@
+/home/ohgee/OneDrive/CLionWorkspace/BS/04/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ohgee/OneDrive/CLionWorkspace/BS/04/cmake-build-debug/CMakeFiles/04.dir
+/home/ohgee/OneDrive/CLionWorkspace/BS/04/cmake-build-debug/CMakeFiles/edit_cache.dir

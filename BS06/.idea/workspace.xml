@@ -11,7 +11,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="447f5d8f-8bb1-4cb7-9063-1f1becdbf587" name="Default Changelist" comment="" />
+    <list default="true" id="447f5d8f-8bb1-4cb7-9063-1f1becdbf587" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BS06.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +64,9 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -67,57 +84,65 @@
       <workItem from="1588431393757" duration="24119000" />
       <workItem from="1588521397628" duration="380000" />
       <workItem from="1588549451373" duration="2510000" />
-      <workItem from="1588603827754" duration="4649000" />
+      <workItem from="1588603827754" duration="5800000" />
+      <workItem from="1588946103116" duration="4604000" />
+      <workItem from="1588961404157" duration="8205000" />
+      <workItem from="1589363874913" duration="121000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="132" y="390" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588432061057">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
     <state x="132" y="390" key="#com.intellij.execution.impl.EditConfigurationsDialog/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588432061057" />
-    <state width="421" height="506" key="DebuggerActiveHint" timestamp="1588431246835">
+    <state width="497" height="506" key="DebuggerActiveHint" timestamp="1588967292931">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state width="421" height="506" key="DebuggerActiveHint/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588431246835" />
-    <state x="718" y="466" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588603845012">
+    <state width="497" height="506" key="DebuggerActiveHint/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588967292931" />
+    <state x="718" y="466" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589363992730">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state x="718" y="466" width="424" height="484" key="FileChooserDialogImpl/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588603845012" />
-    <state width="1261" height="295" key="GridCell.Tab.0.bottom" timestamp="1588459667739">
+    <state x="718" y="466" width="424" height="484" key="FileChooserDialogImpl/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1589363992730" />
+    <state width="1261" height="387" key="GridCell.Tab.0.bottom" timestamp="1588969098700">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state width="1261" height="295" key="GridCell.Tab.0.bottom/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588459667739" />
-    <state width="1261" height="295" key="GridCell.Tab.0.center" timestamp="1588459667739">
+    <state width="1261" height="387" key="GridCell.Tab.0.bottom/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588969098700" />
+    <state width="1261" height="387" key="GridCell.Tab.0.center" timestamp="1588969098700">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state width="1261" height="295" key="GridCell.Tab.0.center/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588459667739" />
-    <state width="1261" height="295" key="GridCell.Tab.0.left" timestamp="1588459667738">
+    <state width="1261" height="387" key="GridCell.Tab.0.center/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588969098700" />
+    <state width="1261" height="387" key="GridCell.Tab.0.left" timestamp="1588969098700">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state width="1261" height="295" key="GridCell.Tab.0.left/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588459667738" />
-    <state width="1261" height="295" key="GridCell.Tab.0.right" timestamp="1588459667739">
+    <state width="1261" height="387" key="GridCell.Tab.0.left/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588969098700" />
+    <state width="1261" height="387" key="GridCell.Tab.0.right" timestamp="1588969098700">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state width="1261" height="295" key="GridCell.Tab.0.right/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588459667739" />
-    <state x="457" y="553" key="SettingsEditor" timestamp="1588427928808">
+    <state width="1261" height="387" key="GridCell.Tab.0.right/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588969098700" />
+    <state x="457" y="553" key="SettingsEditor" timestamp="1588946163740">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state x="457" y="553" key="SettingsEditor/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588427928808" />
-    <state x="739" y="563" key="com.intellij.ide.util.TipDialog" timestamp="1588603827739">
+    <state x="457" y="553" key="SettingsEditor/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588946163740" />
+    <state x="739" y="563" key="com.intellij.ide.util.TipDialog" timestamp="1589363956625">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state x="739" y="563" key="com.intellij.ide.util.TipDialog/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588603827739" />
-    <state x="442" y="364" key="run.anything.popup" timestamp="1588446738685">
+    <state x="739" y="563" key="com.intellij.ide.util.TipDialog/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1589363956625" />
+    <state x="442" y="364" key="run.anything.popup" timestamp="1588967246358">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state x="442" y="364" key="run.anything.popup/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588446738685" />
-    <state x="629" y="444" width="672" height="678" key="search.everywhere.popup" timestamp="1588443621644">
+    <state x="442" y="364" key="run.anything.popup/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588967246358" />
+    <state x="629" y="444" width="672" height="678" key="search.everywhere.popup" timestamp="1588948929363">
       <screen x="45" y="27" width="2515" height="1413" />
     </state>
-    <state x="629" y="444" width="672" height="678" key="search.everywhere.popup/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588443621644" />
+    <state x="629" y="444" width="672" height="678" key="search.everywhere.popup/45.27.2515.1413/2560.0.1920.1080@45.27.2515.1413" timestamp="1588948929363" />
   </component>
 </project>

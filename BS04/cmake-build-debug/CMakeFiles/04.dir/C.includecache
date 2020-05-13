@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ohgee/OneDrive/CLionWorkspace/BS/04/main.c
+stdio.h
+-
+unistd.h
+-
+pwd.h
+-
+values.h
+-
+netdb.h
+-
+string.h
+-
+stdlib.h
+-
+sys/wait.h
+-
+

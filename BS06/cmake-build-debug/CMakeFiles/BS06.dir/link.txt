@@ -1,1 +1,1 @@
-/usr/bin/cc -lm;-lssl;-lcrypto;-pthread;/usr/lib/x86_64-linux-gnu/libcurl.so.4 -g   CMakeFiles/BS06.dir/main.c.o  -o BS06 /usr/lib/x86_64-linux-gnu/libcurl.so 
+/usr/bin/cc -pthread -g   CMakeFiles/BS06.dir/main.c.o  -o BS06 /usr/lib/x86_64-linux-gnu/libcurl.so 

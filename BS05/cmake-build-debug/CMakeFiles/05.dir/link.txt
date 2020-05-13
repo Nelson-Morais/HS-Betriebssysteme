@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/05.dir/main.c.o  -o 05 

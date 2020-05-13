@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/BS07.dir/main.c.o  -o BS07 

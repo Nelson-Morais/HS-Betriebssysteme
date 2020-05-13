@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.15)
+project(05 C)
+
+set(CMAKE_C_STANDARD 99)
+
+add_executable(05 main.c)
