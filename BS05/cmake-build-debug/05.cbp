@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/ohgee/Desktop/05/cmake-build-debug"/>
+				<Option working_dir="/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/ohgee/Desktop/05/cmake-build-debug"/>
+				<Option working_dir="/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="05">
-				<Option output="/home/ohgee/Desktop/05/cmake-build-debug/05" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ohgee/Desktop/05/cmake-build-debug"/>
+				<Option output="/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/05" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -41,15 +41,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 05"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 05"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="05/fast">
-				<Option output="/home/ohgee/Desktop/05/cmake-build-debug/05" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ohgee/Desktop/05/cmake-build-debug"/>
+				<Option output="/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/05" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -61,27 +61,27 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 05/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 05/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/ohgee/Desktop/05/cmake-build-debug"/>
+				<Option working_dir="/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Desktop/05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ohgee/Documents/Betriebssysteme/BS05/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ohgee/Desktop/05/main.c">
+		<Unit filename="/home/ohgee/Documents/Betriebssysteme/BS05/main.c">
 			<Option target="05"/>
 		</Unit>
-		<Unit filename="/home/ohgee/Desktop/05/CMakeLists.txt">
+		<Unit filename="/home/ohgee/Documents/Betriebssysteme/BS05/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/ohgee/Desktop/05/main.c
+/home/ohgee/Documents/Betriebssysteme/BS07/main.c
+getopt.h
+-
 stdio.h
 -
-unistd.h
--
-pwd.h
--
-values.h
--
-netdb.h
--
-string.h
+dirent.h
 -
 stdlib.h
 -
-sys/wait.h
+sys/stat.h
+-
+string.h
+-
+pwd.h
+-
+grp.h
 -
 
