@@ -1,0 +1,3 @@
+/home/ohgee/Documents/Betriebssysteme/BS08/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ohgee/Documents/Betriebssysteme/BS08/cmake-build-debug/CMakeFiles/BS08.dir
+/home/ohgee/Documents/Betriebssysteme/BS08/cmake-build-debug/CMakeFiles/edit_cache.dir

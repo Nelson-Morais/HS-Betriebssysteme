@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ohgee/Documents/Betriebssysteme/BS08/include/ustarFunctions.h
+
+/home/ohgee/Documents/Betriebssysteme/BS08/lib/ustarFunctions.c
+zconf.h
+-
+string.h
+-
+time.h
+-
+../include/ustarFunctions.h
+/home/ohgee/Documents/Betriebssysteme/BS08/include/ustarFunctions.h
+

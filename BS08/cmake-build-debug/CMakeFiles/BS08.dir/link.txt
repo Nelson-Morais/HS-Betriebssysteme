@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/BS08.dir/main.c.o CMakeFiles/BS08.dir/lib/ustarFunctions.c.o  -o BS08 

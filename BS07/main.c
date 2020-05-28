@@ -54,6 +54,8 @@ void list_files(char *dirPath) {
     char str[10];
     char *ctime();
     int count = 0;
+
+
     if ((dir = opendir(dirPath)) == NULL) {
         fprintf(stderr, "ls: can not open %s\n", dirPath);
         exit(EXIT_FAILURE);
@@ -62,7 +64,12 @@ void list_files(char *dirPath) {
             if (dptr->d_name[0] == '.' && !aFlag) {
                 continue;
             }
-            stat(dptr->d_name, &st);
+
+            char * realDir = realpath(dirPath, NULL);
+            strcat(realDir, "/");
+            strcat(realDir,dptr->d_name);
+
+            stat(realDir, &st);
             if (lFlag || oFlag || gFlag) {
                 modeToStr((int) st.st_mode, str);
                 printf("%s ", str);
