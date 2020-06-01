@@ -6,25 +6,47 @@
 #include <zconf.h>
 #include <string.h>
 #include <time.h>
+#include <stdlib.h>
 
 #define TIME_SIZE 32
 
 
 #include "../include/ustarFunctions.h"
 
-
-
-
-time_t parse_time(const char time[]) {
-    time_t ret = 0;
-    unsigned long mult = 1;
-    for (int i = TIME_SIZE; i >= 0; i--) {
-        if (time[i] != '\000') {
-            ret += (time[i] - '0') * mult;
-            mult *= 8;
-        }
+long power(long a, long n) {
+    long x = 1;
+    for (int i = 0; i < n; i++) {
+        x *= a;
     }
-    return ret;
+    return x;
+}
+
+long otd(char *num) {
+    long octalnum = atol(num);
+    long decimalnum = 0, i = 0;
+
+    while (octalnum != 0) {
+        decimalnum += (octalnum % 10) * power(8, i);
+        ++i;
+        octalnum /= 10;
+    }
+    i = 1;
+    return decimalnum;
+}
+
+//https://stackoverflow.com/questions/18858115/c-long-long-to-char-conversion-function-in-embedded-system
+char *itoa(int val, int base) {
+    static char buf[8] = {0};
+    int i = 6;
+
+    for (; val && i; --i, val /= base)
+        buf[i] = "0123456789abcdef "[val % base];
+
+    while (i < sizeof(buf)) {
+        buf[i] = ' ';
+        --i;
+    }
+    return &buf[i + 1];
 }
 
 
@@ -56,10 +78,10 @@ void readTar(int fd) {
             writeToConsole(STDOUT_FILENO, "/");
             writeToConsole(STDOUT_FILENO, buffer.gname);
             writeToConsole(STDOUT_FILENO, " ");
-            writeToConsole(STDOUT_FILENO, buffer.size);
+            writeToConsole(STDOUT_FILENO, itoa(otd(buffer.size), 10));
             writeToConsole(STDOUT_FILENO, " ");
             time_t time;
-            time = parse_time(buffer.mtime);
+            time = otd(buffer.mtime);
             char timeStr[TIME_SIZE];
             strftime(timeStr, TIME_SIZE, "%Y-%m-%d %H:%M", localtime(&time));
             writeToConsole(STDOUT_FILENO, timeStr);
